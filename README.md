@@ -5,14 +5,17 @@
 - Create .ENV
 
 * DATABASE_URL="mysql://user:password@host:port/database"
+  ex: DATABASE_URL="mysql://test_phucnhan:phucnhan@45.76.146.236:3306/test_phucnhan"
 * Secret: (Using in jwt) ex:hoangnhan
 * Secret_Refresh:(Using in jwt) ex: hoangnhan
 
 - Migrate data
 
-*
+* npx prisma migrate dev
 
 - CMD run app
+
+* npm install
 
 * npm start
 
