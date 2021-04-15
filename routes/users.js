@@ -139,8 +139,7 @@ router.get("/get-user-by-id", async (req, res, next) => {
 router.put("/update-user", async (req, res, next) => {
   const { id, username, fullname, status, deleted, avatar } = req.body;
 
-  if (!fullname || !username || !avatar || !status || !deleted)
-    return res.json({ status: 400, message: "Invalid params !" });
+  if (!id) return res.json({ status: 400, message: "Invalid params !" });
 
   try {
     const data = await prisma.user.update({
